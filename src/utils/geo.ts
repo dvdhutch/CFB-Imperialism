@@ -34,13 +34,6 @@ export async function loadUsCounties(): Promise<{ counties: CountyFeature[]; nei
           id: countyId,
         },
       };
-    })
-    .filter((f: CountyFeature) => {
-      // Filter out Alaska counties (state FIPS code 02) but keep Hawaii (state FIPS code 15)
-      // County FIPS codes for Alaska start with 02, Hawaii with 15
-      const countyId = f.properties.id;
-      const stateFips = Math.floor(countyId / 1000);
-      return stateFips !== 2; // Exclude Alaska (FIPS code 02) but keep Hawaii (FIPS code 15)
     });
   
   // Compute neighbors from the original TopoJSON geometries
@@ -60,7 +53,7 @@ export function computeCountyNodes(counties: CountyFeature[], neighbors: number[
 }
 
 export function createUsaProjection(width: number, height: number) {
-  // Use geoAlbersUsa for high-quality zoom and projection, but Alaska counties are filtered out
+  // Use geoAlbersUsa for high-quality zoom and projection, now including Alaska
   return geoAlbersUsa().fitExtent(
     [
       [10, 10],
