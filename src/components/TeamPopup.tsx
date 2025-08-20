@@ -6,9 +6,10 @@ type Props = {
   team: FbsTeamRecord;
   onClose: () => void;
   position?: { x: number; y: number };
+  territorySize?: number; // in square miles
 };
 
-export const TeamPopup: React.FC<Props> = ({ team, onClose }) => {
+export const TeamPopup: React.FC<Props> = ({ team, onClose, territorySize }) => {
   const conferenceLogoUrl = CONFERENCE_LOGOS[team.conference] || '';
 
   return (
@@ -143,6 +144,18 @@ export const TeamPopup: React.FC<Props> = ({ team, onClose }) => {
               )}
             </div>
           </div>
+
+          {/* Territory info */}
+          {territorySize !== undefined && (
+            <div style={{ marginBottom: '16px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', marginBottom: '8px' }}>
+                <span style={{ fontWeight: 'bold', marginRight: '8px', minWidth: '80px' }}>Territory:</span>
+                <span>{Math.round(territorySize).toLocaleString()} mi²</span>
+              </div>
+            </div>
+          )}
+
+
 
           {/* Team logo */}
           {team.logoUrl && (
