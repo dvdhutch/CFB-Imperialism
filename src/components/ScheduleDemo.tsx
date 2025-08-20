@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { useSchedule } from '../hooks/useSchedule';
 import { SEASON_WEEKS } from '../data/schedule';
 import { ALL_SAMPLE_GAMES } from '../data/sample_games';
@@ -19,7 +19,7 @@ export function ScheduleDemo() {
     totalGamesCount,
     eliminationSummary,
     getWeekGames,
-    isTeamEliminated
+
   } = useSchedule();
 
   const handleLoadSampleData = () => {

@@ -41,7 +41,7 @@ const quotes = [
 
 export const LoadingScreen: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);
-  const [currentQuote, setCurrentQuote] = useState(() => {
+  const [currentQuote] = useState(() => {
     // Select a random quote on component mount
     return quotes[Math.floor(Math.random() * quotes.length)];
   });

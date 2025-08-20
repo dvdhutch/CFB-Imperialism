@@ -25,7 +25,7 @@ export function useTeamAreas(teams: Team[], conquestMap?: ConquestMap | null) {
     }
     
     try {
-      const assignment = assignCountiesToTeams(counties, teams, conquestMap);
+      const assignment = assignCountiesToTeams(counties, teams, conquestMap || undefined);
       
       // Calculate county counts for each team
       const countyCounts = new Map<string, number>();

@@ -54,7 +54,7 @@ export const MapUSA: React.FC<Props> = ({ teams, fbsTeams, conquestMap, onMapCli
   const assignment = useMemo(() => {
     if (!counties || teams.length === 0 || counties.length === 0) return null;
     try {
-      return assignCountiesToTeams(counties, teams, conquestMap);
+      return assignCountiesToTeams(counties, teams, conquestMap || undefined);
     } catch (error) {
       console.error('Error assigning counties to teams:', error);
       return null;
