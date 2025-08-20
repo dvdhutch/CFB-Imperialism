@@ -2,6 +2,8 @@
 
 Interactive college football imperialism web app. Built for college football fans to visualize undefeated teams and simulate game outcomes. **Last updated: August 20, 2025.**
 
+![CFB Imperialism Map](public/images/CFB-Imperialism.png)
+
 ## 🏈 How It Works
 
 - Teams start with the counties closest to their home stadium
