@@ -70,7 +70,7 @@ export const TeamForm: React.FC<Props> = ({ onAddTeam }) => {
           type="url" 
           value={logoUrl} 
           onChange={e => setLogoUrl(e.target.value)} 
-          placeholder="https://example.com/logo.png (optional)"
+          placeholder="https://your-team-logo-url.com (optional)"
         />
       </label>
 

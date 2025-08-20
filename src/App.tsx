@@ -23,7 +23,6 @@ function App() {
       try {
         // Load teams
         const completeTeams = getTeamsWithCompleteData();
-        console.log('Loaded teams:', completeTeams);
         setTeams(completeTeams);
 
         // Load counties and initialize conquest map
@@ -40,8 +39,6 @@ function App() {
         // Initialize conquest map with these assignments
         const initialConquestMap = initializeConquestMap(initialAssignment.countyIdToTeamId);
         setConquestMap(initialConquestMap);
-        
-        console.log('Initialized conquest map with', initialConquestMap.size, 'counties');
       } catch (error) {
         console.error('Error loading data:', error);
       }
@@ -59,8 +56,6 @@ function App() {
 
   // Handle team victory - transfer territory from losing team to winning team
   const handleTeamVictory = (winningTeamName: string, losingTeamName: string) => {
-    console.log(`🏆 ${winningTeamName} defeats ${losingTeamName} and takes their territory!`);
-    
     // Find team IDs
     const winningTeam = teams.find(team => team.name === winningTeamName);
     const losingTeam = teams.find(team => team.name === losingTeamName);
@@ -82,7 +77,6 @@ function App() {
     // Remove losing team from active teams
     setTeams(currentTeams => {
       const updatedTeams = currentTeams.filter(team => team.name !== losingTeamName);
-      console.log(`🗺️ Removed ${losingTeamName}. ${updatedTeams.length} teams remaining`);
       return updatedTeams;
     });
   };

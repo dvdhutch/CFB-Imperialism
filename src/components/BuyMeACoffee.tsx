@@ -4,9 +4,7 @@ export const BuyMeACoffee: React.FC = () => {
   const buttonRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    console.log('BuyMeACoffee component mounted');
-    
-    // We're not using the script-based button anymore, just our custom buttons
+    // Cleanup function for component unmount
     return () => {
       if (buttonRef.current) {
         buttonRef.current.innerHTML = '';

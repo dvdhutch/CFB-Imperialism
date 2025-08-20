@@ -218,7 +218,6 @@ export const MapUSA: React.FC<Props> = ({ teams, fbsTeams, conquestMap, onMapCli
     svg.call(zoom as any);
 
     if (!counties) {
-      console.log('No counties loaded yet');
       return;
     }
 

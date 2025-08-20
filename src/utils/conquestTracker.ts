@@ -25,7 +25,6 @@ export function processConquest(
     }
   }
 
-  console.log(`📊 Transferred ${transferredCounties} counties from ${loserTeamId} to ${winnerTeamId}`);
   return newMap;
 }
 

@@ -1,66 +1,55 @@
 import type { UpcomingGame } from '../types';
 
-// Local data structure for upcoming games organized by week
+// Upcoming games organized by week
 export const UPCOMING_GAMES: Record<number, UpcomingGame[]> = {
   0: [
     {
       id: 'week0-game1',
       week: 0,
       awayTeamName: 'Iowa State',
-      awayTeamLogo: 'https://example.com/delaware-state-logo.png',
+      awayTeamLogo: '',
       homeTeamName: 'Kansas State',
-      homeTeamLogo: 'https://example.com/hawaii-logo.png',
+      homeTeamLogo: '',
       gameDate: '2024-08-23'
     },
     {
       id: 'week0-game2',
       week: 0,
       awayTeamName: 'Idaho State',
-      awayTeamLogo: 'https://example.com/notre-dame-logo.png',
+      awayTeamLogo: '',
       homeTeamName: 'UNLV',
-      homeTeamLogo: 'https://example.com/navy-logo.png',
+      homeTeamLogo: '',
       gameDate: '2024-08-23'
     },
     {
       id: 'week0-game3',
       week: 0,
       awayTeamName: 'Fresno State',
-      awayTeamLogo: 'https://example.com/utep-logo.png',
+      awayTeamLogo: '',
       homeTeamName: 'Kansas',
-      homeTeamLogo: 'https://example.com/jacksonville-state-logo.png',
+      homeTeamLogo: '',
       gameDate: '2024-08-23'
     },
     {
       id: 'week0-game4',
       week: 0,
       awayTeamName: 'Sam Houston',
-      awayTeamLogo: 'https://example.com/sacramento-state-logo.png',
+      awayTeamLogo: '',
       homeTeamName: 'Western Kentucky',
-      homeTeamLogo: 'https://example.com/san-jose-state-logo.png',
+      homeTeamLogo: '',
       gameDate: '2024-08-23'
     },
     {
       id: 'week0-game5',
       week: 0,
       awayTeamName: 'Stanford',
-      awayTeamLogo: 'https://example.com/hawaii-logo.png',
+      awayTeamLogo: '',
       homeTeamName: 'Hawaiʻi',
-      homeTeamLogo: 'https://example.com/ucla-logo.png',
+      homeTeamLogo: '',
       gameDate: '2024-08-23'
     }
   ],
   // Week 1 will be added here when ready
-  // 1: [
-  //   {
-  //     id: 'week1-game1',
-  //     week: 1,ho
-  //     homeTeamName: 'Team G',
-  //     homeTeamLogo: 'https://example.com/team-g-logo.png',
-  //     awayTeamName: 'Team H',
-  //     awayTeamLogo: 'https://example.com/team-h-logo.png',
-  //     gameDate: '2024-08-31'
-  //   }
-  // ]
 };
 
 // Helper function to get all available weeks
