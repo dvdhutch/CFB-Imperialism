@@ -1,0 +1,1 @@
+function i(n){return new Map(n)}function u(n,o,t){const e=new Map(n);let r=0;for(const[s,f]of n)f===t&&(e.set(s,o),r++);return console.log(`📊 Transferred ${r} counties from ${t} to ${o}`),e}export{i as initializeConquestMap,u as processConquest};
